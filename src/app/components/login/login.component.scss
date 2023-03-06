@@ -1,0 +1,127 @@
+.login__wrapper {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, #01AEEF 0%, #0093E9 100%);
+    width: 100%;
+    min-height: 100vh;
+    & .login-form {
+        margin-top: 86px;
+        z-index: 1;
+        & .login-header {
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            & .logo-box {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }  
+        }
+        & .mat-mdc-form-field {
+            width: 100%;
+            height: 60px;
+            display: block;
+            margin: 0;
+            margin-bottom: 50px;
+        }
+        ::ng-deep .mat-mdc-text-field-wrapper {
+            background-color: #fff; 
+            border-bottom-left-radius: var(--mdc-shape-small, 4px) !important;
+            border-bottom-right-radius: var(--mdc-shape-small, 4px) !important;
+        }
+        .icon {
+            color: #01AEEF;
+        }
+        .lock-icon {
+            padding: 0;
+            margin: 12px;
+            border-radius: 50%;
+            background: linear-gradient(143.87deg, #01AEEF 5.49%, #0093E9 94.09%);
+            color: #fff;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hide-icon {
+            font-size: 20px;
+        }
+        .login-group {
+            width: 100%;
+            margin-bottom: 26px;
+            ::ng-deep .mat-mdc-checkbox label {
+                color: #fff;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+            }
+            ::ng-deep .mat-mdc-checkbox .mdc-checkbox:hover .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate=true])~.mdc-checkbox__background {
+                background-color: #fff;
+                border: 1px solid #D9D9D9;
+            }
+            ::ng-deep .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate=true])~.mdc-checkbox__background {
+                background-color: #fff;
+                border: 1px solid #D9D9D9;
+            }
+            & .forgot {
+                color: #fff;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+                float: right;
+                margin-top: 10px;
+                margin-right: 5px;
+                cursor: pointer;
+            }
+        }
+        & .btn-box {
+            margin: 0 15px;
+            margin-bottom: 92px;
+            & .btn {
+                width: 100%;
+                height: 48px;
+                border: 1px solid #FFFFFF;
+                background: linear-gradient(180deg, #01AEEF 0%, #0093E9 100%);
+                border-radius: 5px;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: #FFFFFF;
+                cursor: pointer;
+            }
+        }
+        & .footer {
+            & .text {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 18px;
+                /* identical to box height, or 150% */
+
+                text-align: center;
+
+                color: #FFFFFF;
+
+                opacity: 0.6;
+            }
+        }
+    }
+    .footer-img {
+        width: 100vw;
+        position: absolute;
+        top: 563px;
+        height: calc(100vh - 563px);
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,35 @@
+<div class="login__wrapper">
+    <form action="" class="login-form">
+        <header class="login-header">
+            <div class="logo-box">
+                <img src="assets/logo.png" alt="" class="logo">
+            </div>
+        </header>
+        <mat-form-field appearance="outline" >
+            <mat-icon matPrefix class="icon">account_circle</mat-icon>
+            <input matInput placeholder="Tên đăng nhập">
+        </mat-form-field>
+        <mat-form-field appearance="outline" >
+            <mat-icon matPrefix  class="lock-icon">lock_open</mat-icon>
+            <input matInput placeholder="Mật khẩu" [type]="isShow ? 'text' : 'password'">
+            <button *ngIf="!isShow" matSuffix mat-icon-button aria-label="Clear" (click)="isShow = !isShow">
+                <mat-icon class="hide-icon">visibility_off</mat-icon>
+            </button>
+            <button *ngIf="isShow" matSuffix mat-icon-button aria-label="Clear" (click)="isShow = !isShow">
+                <mat-icon class="hide-icon">visibility</mat-icon>
+            </button>
+        </mat-form-field>
+        <div class="login-group">
+            <mat-checkbox class="example-margin checkbox">Lưu đăng nhập</mat-checkbox>
+            <span class="forgot">Bạn quên mật khẩu ? </span>
+        </div>
+        <div class="btn-box">
+            <button class="btn">Đăng nhập</button>
+        </div>
+        <div class="footer">
+            <div class="text">Nếu bạn có thắc mắc hay cần giải đáp, vui lòng liên hệ số điện thoại: 19001000</div>
+            <div class="text">Bản quyền thuộc về AnyBim</div>
+        </div>
+    </form>
+    <img src="assets/Vector.png" alt="" class="footer-img">
+</div>
