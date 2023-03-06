@@ -2,7 +2,7 @@
     <form action="" class="login-form">
         <header class="login-header">
             <div class="logo-box">
-                <img src="assets/logo.png" alt="" class="logo">
+                <img src="assets/logo.png" alt="Logo" class="logo">
             </div>
         </header>
         <mat-form-field appearance="outline" >
@@ -24,7 +24,7 @@
             <span class="forgot">Bạn quên mật khẩu ? </span>
         </div>
         <div class="btn-box">
-            <button class="btn">Đăng nhập</button>
+            <button class="btn" [routerLink]="['/home']">Đăng nhập</button>
         </div>
         <div class="footer">
             <div class="text">Nếu bạn có thắc mắc hay cần giải đáp, vui lòng liên hệ số điện thoại: 19001000</div>

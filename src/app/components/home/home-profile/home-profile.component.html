@@ -1,0 +1,34 @@
+<div class="profile__wrapper">
+    <div class="profile-title">My Profile</div>
+    <div class="profile-infor">
+        <div class="infor-group">
+            <img src="assets/avt.png" alt="avatar" class="avt">
+            <div class="name-and-email">
+                <div class="name">MR. USER</div>
+                <div class="email">Email: user@gmail.com</div>
+            </div>
+        </div>
+        <div class="infor-item">
+            <div class="item-title">Date of birth: </div>
+            <div class="item-content">
+                <mat-form-field appearance="fill">
+                    <input matInput [matDatepicker]="picker">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+            </div>
+        </div>
+        <div class="infor-item">
+            <div class="item-title">Sex: </div>
+            <div class="item-content">21321</div>
+        </div>
+        <div class="infor-item">
+            <div class="item-title">Address Company: </div>
+            <div class="item-content">21321</div>
+        </div>
+        <div class="infor-item">
+            <div class="item-title">Address Home: </div>
+            <div class="item-content">21321</div>
+        </div>
+    </div>
+</div>
