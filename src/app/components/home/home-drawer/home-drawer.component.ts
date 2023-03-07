@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonService } from 'src/app/services/common.service';
 interface IItemMenu {
   name: string
   icon: string
@@ -11,7 +12,7 @@ interface IItemMenu {
   templateUrl: './home-drawer.component.html',
   styleUrls: ['./home-drawer.component.scss']
 })
-export class HomeDrawerComponent {
+export class HomeDrawerComponent implements OnInit {
   items: IItemMenu[] = [
     {
       name: 'Shop',
@@ -33,10 +34,15 @@ export class HomeDrawerComponent {
     }
   ]
   isShow = false;
-  constructor(private router: Router){
-      const routerNow = router.url.split('/').pop();
+  constructor(private commonService: CommonService, private router: Router){
+    const routers = this.router.url.split('/');
+    const routerNow = this.router.url.split('/').pop();
+    routerNow &&  this.commonService.setCurrentUrl(routers.length === 3 ? routerNow : 'shop')
+  }
+  ngOnInit(): void {
+    this.commonService.currentUrl$.subscribe(url => {
       const newItems = this.items.map(item => {
-        if (item.link.split('/').pop() === routerNow) {
+        if (item.link.split('/').pop() === url) {
           return {
             ...item,
             active: true
@@ -48,11 +54,12 @@ export class HomeDrawerComponent {
         }
       })
       this.items = newItems;
-    }
-
+    })
+  }
   handleClickItem = (_item: IItemMenu) => {
     const newItems = this.items.map(item => {
       if (item.name === _item.name) {
+        this.commonService.setCurrentUrl(item.name);
         return {
           ...item,
           active: true

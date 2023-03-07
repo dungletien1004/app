@@ -16,6 +16,8 @@ import { HomeProfileComponent } from './components/home/home-profile/home-profil
 import { ShopHeaderComponent } from './components/home/home-shop/shop-header/shop-header.component';
 import { ShopBodyComponent } from './components/home/home-shop/shop-body/shop-body.component';
 import { ShopItemComponent } from './components/home/home-shop/shop-item/shop-item.component';
+import { StarRatingComponent } from './shared/star-rating/star-rating.component';
+import { ProductDetailsComponent } from './components/home/product-details/product-details.component';
 // import { NgxMaterialRatingModule } from 'ngx-material-rating';
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { ShopItemComponent } from './components/home/home-shop/shop-item/shop-it
     HomeProfileComponent,
     ShopHeaderComponent,
     ShopBodyComponent,
-    ShopItemComponent
+    ShopItemComponent,
+    StarRatingComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

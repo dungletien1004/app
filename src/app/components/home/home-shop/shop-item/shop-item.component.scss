@@ -1,0 +1,36 @@
+.shop-item {
+    width: 320px;
+    display: flex;
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    &:hover {
+        box-shadow: rgba(0, 63, 146, 0.5) 0px 2px 8px 0px;
+    }
+    & .item-img {
+        width: 127px;
+        height: 173px;
+        object-fit: contain;
+    }
+    & .infor-group {
+        margin-left: 26px;
+        
+        font-family: 'Roboto';
+        font-style: normal;
+        & .phone-name {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 32px;
+            margin-top: 10px;
+            text-align: center;
+        }
+        & .phone-price {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 40px;
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+}

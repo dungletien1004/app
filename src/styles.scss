@@ -45,3 +45,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
         }
     }
 }
+.mat-mdc-icon-button[disabled][disabled] {
+    --mdc-icon-button-icon-color: #ffd740;
+    --mat-mdc-button-persistent-ripple-color: #ffd740;
+    --mdc-icon-button-disabled-icon-color: #ffd740;
+    padding: 6px;
+    width: 24px;
+    height: 24px;
+}
