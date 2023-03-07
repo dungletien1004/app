@@ -13,6 +13,10 @@ import { HomeDrawerComponent } from './components/home/home-drawer/home-drawer.c
 import { HomeShopComponent } from './components/home/home-shop/home-shop.component';
 import { HomeCartComponent } from './components/home/home-cart/home-cart.component';
 import { HomeProfileComponent } from './components/home/home-profile/home-profile.component';
+import { ShopHeaderComponent } from './components/home/home-shop/shop-header/shop-header.component';
+import { ShopBodyComponent } from './components/home/home-shop/shop-body/shop-body.component';
+import { ShopItemComponent } from './components/home/home-shop/shop-item/shop-item.component';
+// import { NgxMaterialRatingModule } from 'ngx-material-rating';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +26,10 @@ import { HomeProfileComponent } from './components/home/home-profile/home-profil
     HomeDrawerComponent,
     HomeShopComponent,
     HomeCartComponent,
-    HomeProfileComponent
+    HomeProfileComponent,
+    ShopHeaderComponent,
+    ShopBodyComponent,
+    ShopItemComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +37,8 @@ import { HomeProfileComponent } from './components/home/home-profile/home-profil
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    // NgxMaterialRatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

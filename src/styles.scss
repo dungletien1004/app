@@ -7,3 +7,41 @@ body {
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
  }
+ .cdk-overlay-pane {
+    width: 350px;
+    min-width: 280px !important;
+    max-width: 350px !important;
+    display: block;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    & .mat-mdc-menu-content {
+        padding-top: 0;
+    }
+    & .btn-filter {
+        width: 100%;
+    }
+    & .filter-item {
+        & .item-title {
+            margin-top: 20px;
+            margin-left: 40px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 16px;
+        }
+        & .filter-select {
+            display: flex;
+            position: relative;
+            height: 60px;
+            margin-top: 10px;
+            & .select-title {
+                margin: auto 0;
+            }
+            & .select {
+                position: absolute;
+                right: 10px;
+                height: 56px;;
+            }
+        }
+    }
+}

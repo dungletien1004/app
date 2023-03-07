@@ -32,6 +32,7 @@ export class HomeDrawerComponent {
       link: '/home/profile'
     }
   ]
+  isShow = false;
   constructor(private router: Router){
       const routerNow = router.url.split('/').pop();
       const newItems = this.items.map(item => {

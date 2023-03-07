@@ -12,23 +12,40 @@
             <div class="item-title">Date of birth: </div>
             <div class="item-content">
                 <mat-form-field appearance="fill">
-                    <input matInput [matDatepicker]="picker">
+                    <input matInput [matDatepicker]="picker" [(ngModel)]="date">
                     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
-                  </mat-form-field>
+                </mat-form-field>
+                
             </div>
         </div>
         <div class="infor-item">
             <div class="item-title">Sex: </div>
-            <div class="item-content">21321</div>
+            <div class="item-content">
+                <mat-form-field appearance="fill">
+                    <mat-select [(ngModel)]="selected">
+                      <mat-option *ngFor="let gender of genders" [value]="gender.value">
+                        {{gender.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
         </div>
         <div class="infor-item">
             <div class="item-title">Address Company: </div>
-            <div class="item-content">21321</div>
+            <div class="item-content">
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Ex. Pizza" value="15, Duy Tan, Dich Vong Hau, Cau Giay, Ha Noi">
+                </mat-form-field>
+            </div>
         </div>
         <div class="infor-item">
             <div class="item-title">Address Home: </div>
-            <div class="item-content">21321</div>
+            <div class="item-content">
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Ex. Pizza" value="15, Duy Tan, Dich Vong Hau, Cau Giay, Ha Noi">
+                </mat-form-field>
+            </div>
         </div>
     </div>
 </div>

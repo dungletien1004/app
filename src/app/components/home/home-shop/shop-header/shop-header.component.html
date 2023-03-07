@@ -1,0 +1,73 @@
+<div class="shop-header">
+    <div class="header-title">Shop</div>
+    <div class="header-group">
+        <div class="group-title">Shop</div>
+        <div class="search-group">
+            <div class="search">
+                <mat-form-field class="example-full-width" appearance="outline" >
+                    <mat-label>Search</mat-label>
+                    <input matInput placeholder="Search...">
+                    <mat-icon matSuffix>search</mat-icon>
+                  </mat-form-field>
+            </div>
+
+            <button mat-button (click)="isOpen = !isOpen" type="button" cdkOverlayOrigin #trigger="cdkOverlayOrigin" class="filter">
+                <mat-icon class="filter-icon">filter_alt</mat-icon>
+              </button>
+            <ng-template
+                cdkConnectedOverlay
+                [cdkConnectedOverlayOrigin]="trigger"
+                [cdkConnectedOverlayOpen]="isOpen"
+                class="filter-show"
+            >
+                <button mat-raised-button class="btn-filter">Filter</button>
+                <div class="filter-item">
+                    <div class="item-title">Giá</div>
+                    <div class="filter-select">
+                        <div class="select-title">Từ:</div>
+                        <mat-form-field appearance="outline" class="select">
+                            <mat-select [(ngModel)]="priceSelect.from">
+                              <mat-option *ngFor="let price of prices" [value]="price.value">
+                                {{price.viewValue}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <div class="filter-select">
+                        <div class="select-title">Đến:</div>
+                        <mat-form-field appearance="outline" class="select">
+                            <mat-select [(ngModel)]="priceSelect.to">
+                              <mat-option *ngFor="let price of prices" [value]="price.value">
+                                {{price.viewValue}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <div class="item-title">Đánh giá</div>
+                    <div class="filter-select">
+                        <div class="select-title">Từ:</div>
+                        <mat-form-field appearance="outline" class="select">
+                            <mat-select [(ngModel)]="ratingSelect.from">
+                              <mat-option *ngFor="let rating of ratings" [value]="rating.value">
+                                {{rating.viewValue}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <div class="filter-select">
+                        <div class="select-title">Đến:</div>
+                        <mat-form-field appearance="outline" class="select">
+                            <mat-select [(ngModel)]="ratingSelect.to">
+                              <mat-option *ngFor="let rating of ratings" [value]="rating.value">
+                                {{rating.viewValue}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

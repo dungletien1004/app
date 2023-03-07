@@ -2,7 +2,9 @@
     width: 243px;
     height: 100%;
     min-height: 100vh;
-    border: 1px solid #adb5bd;
+    // border: 1px solid #adb5bd;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 0.2s ease-in-out;
     & .drawer-header {
         height: 60px;
         background: #FFFFFF;
@@ -19,11 +21,17 @@
             align-items: center;
             color: #000000;
             margin: auto 17px;
+            transition: display 2s ease-in-out;
+
         }
         & .icon-menu {
             position: absolute;
-            right: 18px;
-            top: 18px;
+            right: 14px;
+            top: 10px;
+            width: 44px;
+            height: 42px;
+            font-size: 44px;
+            cursor: pointer;
         }
     }
     & .item-group {
@@ -35,6 +43,7 @@
                 height: 42px;
                 font-size: 44px;
                 margin: 10px 17px 10px 13px;
+                cursor: pointer;
             }
             & h1 {
                 font-family: 'Roboto';
@@ -43,12 +52,31 @@
                 font-size: 24px;
                 line-height: 28px;
                 margin: auto 0;
+                transition: width 2s ease-in-out;
             }
         }
         & .active {
             color: #0FEAF8;
             border-bottom: 1px solid #0FEAF8;
             border-top: 1px solid #0FEAF8;
+        }
+    }
+}
+.show {
+    width: 70px;
+    & .drawer-header {
+        & span {
+            // display: none;
+            width: 0;
+            overflow: hidden;
+        }
+    }
+    & .item-group {
+        & .item {
+            & h1 {
+                width: 0;
+                overflow: hidden;
+            }
         }
     }
 }
