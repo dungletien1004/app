@@ -1,7 +1,7 @@
 <div class="shop-item" (click)="goToProductDetails(data.id)">
     <img [src]="data.img[0]" alt="Phone" class="item-img">
     <div class="infor-group">
-        <div class="phone-name">{{data.name + data.id}}</div>
+        <div class="phone-name">{{data.name}}</div>
         <div class="phone-price">{{convertToPrice(data.price)}}</div>
         <app-star-rating [rating]="data.rating" ></app-star-rating>
     </div>

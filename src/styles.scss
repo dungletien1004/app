@@ -18,8 +18,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
     & .mat-mdc-menu-content {
         padding-top: 0;
     }
-    & .btn-filter {
+    & .btn-filter, .btn-clear {
         width: 100%;
+    }
+    & .btn-clear {
+        margin-top: 10px;
     }
     & .filter-item {
         & .item-title {

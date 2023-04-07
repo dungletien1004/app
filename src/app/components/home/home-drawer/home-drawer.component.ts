@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { dataShop } from 'src/app/data/data';
 import { CommonService } from 'src/app/services/common.service';
 interface IItemMenu {
   name: string

@@ -1,0 +1,23 @@
+<div class="cart-item__wrapper">
+    <div class="flex">
+        <img [src]="data.img[0]" alt="Phone" class="img">
+        <div class="phone-details">
+            <div class="phone-infor" (click)="goToItem(data.id)">
+                <div class="phone-name">{{data.name}}</div>
+                <div class="phone-content">{{data.content}}</div>
+                <div class="phone-price">{{convertToPrice(data.price)}}</div>
+            </div>
+            <div class="phone-quantity">
+                <button mat-button (click)="changeQuantity(data.id, 'MINUS')">
+                    <mat-icon >remove</mat-icon>
+                </button>
+                <div class="quantity">{{data.quantity}}</div>
+                <button mat-button (click)="changeQuantity(data.id, 'PLUS')">
+                    <mat-icon >add</mat-icon>
+                </button>
+            </div>
+            <mat-icon class="remove" (click)="removeItemFromCart(data.id)">clear</mat-icon>
+        </div>
+    </div>
+    <hr />
+</div>

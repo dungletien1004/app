@@ -1,1 +1,30 @@
-<p>home-cart works!</p>
+<div class="cart__wrapper">
+    <div class="cart-header">
+        <div class="title">Cart</div>
+        <div class="cacl-length">{{length}} Item in bag</div>
+    </div>
+    <hr />
+    <div *ngIf="length > 0; else elseBlock" class="item-group" >
+        <div class="item-list">
+            <app-cart-item *ngFor="let item of cart" [data]="item" ></app-cart-item>
+        </div>
+        <hr />    
+        <div class="price-total">
+            <div class="total">
+                <div class="title">SubTotal: </div>
+                <div class="price">{{convertToPrice(caclPrice())}}</div>
+            </div>
+            <div class="total">
+                <div class="title">Tax: </div>
+                <div class="price">{{convertToPrice(tax)}}</div>
+            </div>
+            <div class="total">
+                <div class="title">Total: </div>
+                <div class="price">{{convertToPrice(caclPrice() + tax)}}</div>
+            </div>
+        </div>
+    </div>
+    <ng-template class="empty" #elseBlock>
+        <div class="empty">Giỏ hàng trống</div>
+    </ng-template>
+</div>

@@ -1,10 +1,10 @@
 .drawer__wrapper {
     width: 243px;
     height: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 120px);
     // border: 1px solid #adb5bd;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease;
     & .drawer-header {
         height: 60px;
         background: #FFFFFF;

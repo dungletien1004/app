@@ -1,6 +1,37 @@
 <div class="product-header">
     <div class="header-title">Shop</div>
     <div class="header-group">
-        <div class="breadcrumb">{{'Shop / Product / ' + dataNow.name + dataNow.id}}</div>
+        <div class="breadcrumb">{{'Shop / Product / ' + dataNow.name}}</div>
+        
+        <div class="cart-group" (click)="goToCart()">
+            <mat-icon class="shopping-cart">shopping_cart</mat-icon>
+            <div class="cart-number">{{cartLength}}</div>
+        </div>
+    </div>
+</div>
+<hr />
+<div class="product-content">
+    <div class="img-group">
+        <img [src]="mainImg" alt="Phone" class="main-img">
+        <div class="img-list">
+            <img
+                *ngFor="let img of dataNow.img"
+                [src]="img"
+                alt="Phone"
+                class="child-img"
+                [ngClass]="{'active': mainImg === img}"
+                (click)="onClickChildImg(img)"
+            >
+        </div>
+    </div>
+    <div class="product-details">
+        <div class="phone-name">{{dataNow.name}}</div>
+        <div class="phone-content">{{dataNow.content}}</div>
+        <div class="phone-price">{{convertToPrice(dataNow.price)}}</div>
+        <app-star-rating [rating]="dataNow.rating" ></app-star-rating>
+        <div class="btn-group">
+            <button mat-raised-button class="btn blue">Mua ngay</button>
+            <button mat-raised-button class="btn green" (click)="addItemToCart()">Thêm vào giỏ hàng</button>
+        </div>
     </div>
 </div>

@@ -7,6 +7,15 @@ export interface IDataProduct {
     rating: number
     img: string[]
 }
+export interface IDataCart {
+    id: string
+    name: string
+    content: string
+    price: number
+    rating: number
+    img: string[]
+    quantity: number
+}
 export const dataShop: IDataProduct[] = [
     {
         id: '1',
@@ -18,7 +27,7 @@ export const dataShop: IDataProduct[] = [
     },
     {
         id: '2',
-        name: 'Sam sung galaxy A1',
+        name: 'Sam sung galaxy B123',
         content: 'Galaxy A31 là mẫu smartphone tầm trung mới ra mắt đầu năm 2020 của Samsung. Thiết bị gây ấn tượng mạnh với ngoại hình thời trang, cụm 4 camera đa chức năng, vân tay dưới màn hình và viên pin khủng lên đến 5000 mAh.',
         price: 60000000,
         rating: 1,
@@ -26,7 +35,7 @@ export const dataShop: IDataProduct[] = [
     },
     {
         id: '3',
-        name: 'Sam sung galaxy A1',
+        name: 'Sam sung galaxy C123',
         content: 'Galaxy A31 là mẫu smartphone tầm trung mới ra mắt đầu năm 2020 của Samsung. Thiết bị gây ấn tượng mạnh với ngoại hình thời trang, cụm 4 camera đa chức năng, vân tay dưới màn hình và viên pin khủng lên đến 5000 mAh.',
         price: 68000000,
         rating: 0,
@@ -34,7 +43,7 @@ export const dataShop: IDataProduct[] = [
     },
     {
         id: '4',
-        name: 'Sam sung galaxy A1',
+        name: 'Iphone 14',
         content: 'Galaxy A31 là mẫu smartphone tầm trung mới ra mắt đầu năm 2020 của Samsung. Thiết bị gây ấn tượng mạnh với ngoại hình thời trang, cụm 4 camera đa chức năng, vân tay dưới màn hình và viên pin khủng lên đến 5000 mAh.',
         price: 3000000,
         rating: 3,
@@ -42,7 +51,7 @@ export const dataShop: IDataProduct[] = [
     },
     {
         id: '5',
-        name: 'Sam sung galaxy A1',
+        name: 'Iphone 15',
         content: 'Galaxy A31 là mẫu smartphone tầm trung mới ra mắt đầu năm 2020 của Samsung. Thiết bị gây ấn tượng mạnh với ngoại hình thời trang, cụm 4 camera đa chức năng, vân tay dưới màn hình và viên pin khủng lên đến 5000 mAh.',
         price: 61000000,
         rating: 5,
@@ -50,7 +59,7 @@ export const dataShop: IDataProduct[] = [
     },
     {
         id: '6',
-        name: 'Sam sung galaxy A1',
+        name: 'Xiaomi Note11',
         content: 'Galaxy A31 là mẫu smartphone tầm trung mới ra mắt đầu năm 2020 của Samsung. Thiết bị gây ấn tượng mạnh với ngoại hình thời trang, cụm 4 camera đa chức năng, vân tay dưới màn hình và viên pin khủng lên đến 5000 mAh.',
         price: 62000000,
         rating: 1,
@@ -58,7 +67,7 @@ export const dataShop: IDataProduct[] = [
     },
     {
         id: '7',
-        name: 'Sam sung galaxy A1',
+        name: 'Sam sung CAA A1',
         content: 'Galaxy A31 là mẫu smartphone tầm trung mới ra mắt đầu năm 2020 của Samsung. Thiết bị gây ấn tượng mạnh với ngoại hình thời trang, cụm 4 camera đa chức năng, vân tay dưới màn hình và viên pin khủng lên đến 5000 mAh.',
         price: 36000000,
         rating: 4,
@@ -66,7 +75,7 @@ export const dataShop: IDataProduct[] = [
     },
     {
         id: '8',
-        name: 'Sam sung galaxy A1',
+        name: 'Sam sung bb1 A1',
         content: 'Galaxy A31 là mẫu smartphone tầm trung mới ra mắt đầu năm 2020 của Samsung. Thiết bị gây ấn tượng mạnh với ngoại hình thời trang, cụm 4 camera đa chức năng, vân tay dưới màn hình và viên pin khủng lên đến 5000 mAh.',
         price: 26000000,
         rating: 2,
